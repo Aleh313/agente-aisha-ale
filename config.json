@@ -1,0 +1,46 @@
+{
+  "agentId": "ag_aisha_ale",
+  "folderName": "09_aisha_ale",
+  "learnedKnowledge": [
+    "Aprende las acciones de Ale, controla la domótica del Depto de Ale y su música de taller."
+  ],
+  "customBotEntry": "agente.js",
+  "systemPromptFile": "PROMPT_ENTRENAMIENTO.md",
+  "role": "Asistente Personal de Rutina & Foco de Ale",
+  "name": "Aisha (Ale)",
+  "lastUpdated": "29/10/2026, 03:05:13",
+  "watchPaths": [
+    "c:\\Users\\aleh3\\Desktop\\PROYECTO ELECTRONICAT\\agentes\\09_aisha_ale\\recursos_y_videos",
+    "c:\\Users\\aleh3\\Desktop\\PROYECTO ELECTRONICAT\\media_taller"
+  ],
+  "alwaysOn24x7": true,
+  "sector": "lab",
+  "skills": [
+    {
+      "id": "wshobson/agents@session-guard",
+      "name": "Guardián de Fatiga & Foco",
+      "desc": "Previene el agotamiento cognitivo tras horas continuas en banco de soldadura o microscopio."
+    },
+    {
+      "id": "deep-agents-memory",
+      "name": "Memoria de Hábitos & Preferencias",
+      "desc": "Registra los hábitos completados (+5 pts) y música preferida de Ale."
+    },
+    {
+      "id": "pc-media-control",
+      "name": "Control Multimedia del Taller",
+      "desc": "Lanza presets de Rock Nacional y controla volumen del taller por comandos."
+    }
+  ],
+  "peers": [
+    "ag_aisha_lucas",
+    "ag_silphy",
+    "ag_rudy"
+  ],
+  "responsibilities": [
+    "Monitorear la energía y satisfacción de Ale.",
+    "Recordar pausas activas cada 2 horas de trabajo intenso en taller.",
+    "Notificar a Ale cuando Silphy liquide un retiro de fondos para socios."
+  ],
+  "skillsFile": "SKILLS.md"
+}

@@ -1,0 +1,11 @@
+{
+  "name": "agente-aisha-ale",
+  "version": "1.0.0",
+  "description": "Micro-asistente Aisha Ale: Preparación Física de Vóley (Líbero) y Soporte Taller",
+  "main": "agente.js",
+  "scripts": {
+    "start": "node agente.js"
+  },
+  "author": "Ale & Lucas - Electronicat",
+  "license": "ISC"
+}

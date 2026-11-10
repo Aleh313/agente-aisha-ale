@@ -1,0 +1,11 @@
+{
+  "manifest_version": 3,
+  "name": "Aisha Greyrat - Control YouTube Music (Electronicat)",
+  "version": "1.0.0",
+  "description": "Permite que Aisha controle UNA SOLA pestaña de YouTube Music sin abrir pestañas repetidas ni duplicar canciones.",
+  "permissions": ["tabs", "scripting"],
+  "host_permissions": ["*://music.youtube.com/*", "http://localhost:3000/*"],
+  "background": {
+    "service_worker": "background.js"
+  }
+}
