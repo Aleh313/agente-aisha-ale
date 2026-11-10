@@ -1,24 +1,31 @@
-# 🌸 Agente 09: Aisha Greyrat (Asistente Personal de Ale)
-
-**Rol Principal:** Asistente Personal de Alejandro Heredia, Automatizaciones Windows de PC & Soporte Operativo.  
-**Ubicación:** `agentes/09_aisha_ale/`  
-**Estado:** Activo (App PWA dedicada + Agente Local).
+# 🤖 Micro-Agente Autónomo: Aisha Greyrat (Ale)
+**Rol Oficial:** Asistente Personal de Ale: Preparación Física (Vóley Líbero) & Taller  
+**Repositorio Independiente:** `Aleh313/agente-aisha-ale`  
+**Ecosistema:** Electronicat (Catamarca, Argentina)
 
 ---
 
 ## 🎯 1. Propósito y Misión Operativa
+Acompañamiento integral de Ale: plan de entrenamiento en casa (17-25 min Full Body), cuidado de articulaciones para A1/A2 y soporte de taller.
 
-Aisha es la asistente de máxima confianza de Ale, dedicada a optimizar su jornada tanto en la PC central como desde su celular:
-1. Brindar recordatorios personales (foco técnico, descanso, hidratación y prioridades del día).
-2. Controlar de forma nativa la PC de trabajo: reproducción de YouTube Music sin saturación de pestañas en Brave (`scripts_custom/control_pc_ytmusic.ps1`).
-3. Servir como nexo directo con Norn y Rudy para consultar agendas y estados de taller sin salir de su app personal.
+Este repositorio es un **microsistema 100% independiente**. Puede clonarse, modificarse y desplegarse de manera aislada sin depender del servidor central monolítico.
 
 ---
 
-## 🤖 2. Directivas para Agentes de IA que Modifiquen este Agente
+## ⚙️ 2. Arquitectura de Archivos y Funcionamiento
+Para que cualquier modelo de IA o desarrollador trabaje en esta carpeta:
 
-- **Lectura Previa Obligatoria:** Revisar [`PROMPT_ENTRENAMIENTO.md`](./PROMPT_ENTRENAMIENTO.md) (personalidad eficiente, afectuosa, resolutiva y ultra organizada).
-- **Memoria Persistente:** Registrar hábitos, automatizaciones y preferencias de Ale en [`memoria/MEMORIA_ACTIVIDAD.md`](./memoria/MEMORIA_ACTIVIDAD.md).
-- **Aislamiento de Código:** Esta carpeta pertenece exclusivamente a las rutinas de Ale. **No debe mezclarse con la instancia de Lucas (`10_aisha_lucas`)**.
-- **Automatizaciones Windows:** Cualquier script que interactúe con el escritorio debe respetar la sesión gráfica activa (`Winsta0\Default`) tal como está implementado en `control_pc_ytmusic.ps1`.
-- **Verificación:** Probar siempre en la PC Central de Ale antes de subir cambios.
+- **`db.json`**: Base de datos local y persistente exclusiva de este agente. Almacena en `db.json` sesiones de entrenamiento, registro de fatiga física y recordatorios personales.
+- **`agente.js`**: Lógica de inicialización autónoma, bucle de ejecución y conexión al bus de eventos.
+- **`PROMPT_ENTRENAMIENTO.md`**: Cerebro del agente, bibliografía técnica inyectada y reglas operativas inquebrantables.
+- **`SKILLS.md`**: Capacidades y herramientas específicas asignadas a su rol.
+- **`config.json`**: Metadatos de configuración, sector asignado y pares de comunicación.
+- **`memoria/MEMORIA_ACTIVIDAD.md`**: Registro inmutable de contexto histórico y última mejora implementada.
+
+---
+
+## 🛡️ 3. Reglas de Oro para IAs y Desarrolladores que Modifiquen este Agente
+1. **No mezclar bases de datos:** Este agente solo debe leer y escribir en su propio `db.json` local. Nunca intentes acceder directamente a bases de otros agentes; toda interacción entre agentes se realiza mediante eventos en el bus.
+2. **Respetar la personalidad y rol:** Consulta siempre `PROMPT_ENTRENAMIENTO.md` antes de generar código o respuestas.
+3. **Persistir cada mejora:** Cada vez que resuelvas un bug, agregues una regla o actualices datos, debes registrar la entrada con fecha en `memoria/MEMORIA_ACTIVIDAD.md`.
+4. **Commits atómicos y claros:** Al hacer push a este repositorio, escribe mensajes descriptivos del cambio realizado en el micro-agente.
